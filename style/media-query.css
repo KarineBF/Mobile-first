@@ -23,7 +23,7 @@ Obs: Esses números variam conforme o tempo
         font-family: 'Courier New', Courier, monospace; /* Fonte própria para impressão */
     }
     body{
-        background-image: url(imagens/back-print.jpg); /* Desnecessário */
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário */
     }
     main{
         width: 90%; /* Corresponde a 90% do espaço, não sei se essa é a forma correta, o cerreto é 90vw */
@@ -59,7 +59,7 @@ Obs: Esses números variam conforme o tempo
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body{
-        background-image: url(imagens/back-tablet.jpg)
+        background-image: url(../imagens/back-tablet.jpg)
     }
     img#celular{
         display: none;
@@ -83,7 +83,7 @@ Obs: Esses números variam conforme o tempo
 
 @media screen and (min-width: 992px) and (max-width: 1296px){
     body{
-        background-image: url(imagens/back-pc.jpg);
+        background-image: url(../imagens/back-pc.jpg);
     }
     img#celular{
         display: none;
@@ -107,7 +107,7 @@ Obs: Esses números variam conforme o tempo
 
 @media screen and (min-width: 1296px) {
     body{
-        background-image: url(imagens/back-tv.jpg);
+        background-image: url(../imagens/back-tv.jpg);
     }
     img#celular{
         display: none;
