@@ -1,51 +1,128 @@
 @charset "UTF-8";
 
-/* Versão mobile first */
+/* Todas as demais mídias */
 
-*{  
-    margin: 0px;
-    padding: 0px;
-    font-size: 1em;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+/* 
+
+    Typical device breakpoints
+----------------------------------
+Telas pequenas: até 600px
+Celular: 600px até 768px
+Tablet: 768px até 992x
+Desktop: 992px até 1296px
+Grandes telas: acima de 1296px
+
+Obs: Esses números variam conforme o tempo
+
+*/
+
+/* Impressora */
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace; /* Fonte própria para impressão */
+    }
+    body{
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário */
+    }
+    main{
+        width: 90%; /* Corresponde a 90% do espaço, não sei se essa é a forma correta, o cerreto é 90vw */
+        border: 2px solid black;
+    }
+    main h1{
+        color: black;
+        text-shadow: none;
+    }
+    main::after{
+        text-align: center;
+        text-decoration: overline;
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+    }
+    img#celular{
+        display: none;
+    }
+    img#tablet{
+        display: none;
+    }
+    img#impressao{
+        display: block;
+    }
+    img#pc{
+        display: none;
+    }
+    img#tv{
+        display: none;
+    }
 }
-html{
-    height: 100vh;
+
+ /* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: url(../imagens/back-tablet.jpg)
+    }
+    img#celular{
+        display: none;
+    }
+    img#tablet{
+        display: block;
+    }
+    img#impressao{
+        display: none;
+    }
+    img#pc{
+        display: none;
+    }
+    img#tv{
+        display: none;
+    }
+    
 }
-body{
-    background-size: cover;
-    background: black url(../imagens/back-phone.jpg) no-repeat center;
+
+/* Desktop */
+
+@media screen and (min-width: 992px) and (max-width: 1296px){
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#celular{
+        display: none;
+    }
+    img#tablet{
+        display: none;
+    }
+    img#impressao{
+        display: none;
+    }
+    img#pc{
+        display: block;
+    }
+    img#tv{
+        display: none;
+    }
+    
 }
-main{
-    width: 400px;
-    margin: auto;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.842);
-}
-h1{
-    color: white;
-    font-size: 2em;
-    text-align: center;
-    text-shadow: 2px 2px 2px black;
-}
-img{
-    margin: auto;
-    display: block;
-}
-img#celular{
-    display: block;
-}
-img#tablet{
-    display: none;
-}
-img#impressao{
-    display: none;
-}
-img#pc{
-    display: none;
-}
-img#tv{
-    display: none;
+
+/* Telas grandes */
+
+@media screen and (min-width: 1296px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#celular{
+        display: none;
+    }
+    img#tablet{
+        display: none;
+    }
+    img#impressao{
+        display: none;
+    }
+    img#pc{
+        display: none;
+    }
+    img#tv{
+        display: block;
+    }
+    
 }
