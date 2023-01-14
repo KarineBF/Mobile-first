@@ -8,7 +8,7 @@
 ----------------------------------
 Telas pequenas: até 600px
 Celular: 600px até 768px
-Tablet: 768px até 992x
+Tablet: 768px até 992px
 Desktop: 992px até 1296px
 Grandes telas: acima de 1296px
 
@@ -26,7 +26,7 @@ Obs: Esses números variam conforme o tempo
         background-image: url(./imagens/back-print.jpg); /* Desnecessário */
     }
     main{
-        width: 90%; /* Corresponde a 90% do espaço, não sei se essa é a forma correta, o cerreto é 90vw */
+        width: 90%; /* Corresponde a 90% do espaço, não sei se essa é a forma correta, o correto é 90vw */
         border: 2px solid black;
     }
     main h1{
@@ -59,7 +59,7 @@ Obs: Esses números variam conforme o tempo
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body{
-        background-image: url(../imagens/back-tablet.jpg)
+        background-image: url(../imagens/back-tablet.jpg);
     }
     img#celular{
         display: none;
